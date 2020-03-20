@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "repository": "https://github.com/ndom91/covid19-de",
+  "author": "ndom91 <yo@ndo.dev>",
   "dependencies": {
     "chrome-aws-lambda": "^2.1.1",
     "isomorphic-unfetch": "^3.0.0",

@@ -31,7 +31,10 @@ export default async (_, response: NowResponse) => {
   )
     .then(resp => resp.json())
     .then(data => {
-      console.log(data);
+      response.json({
+        result: data
+      });
+      // console.log(data);
     });
 
   // response.json({
