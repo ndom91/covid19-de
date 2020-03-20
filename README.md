@@ -1,6 +1,8 @@
-# COVID-19 API
+# DE COVID-19 API
 
-> Serving data from John Hopkins University CSSE as a [JSON API](https://covid19.mathdro.id)
+Part of the #wirvsvirushackathon
+
+> Serving data from Robert Koch Institut as a [JSON API](https://covid19.ndo.dev)
 
 ## Usage
 
@@ -14,6 +16,6 @@
 
 ## License
 
-MIT License 2020, mathdroid.
+MIT License 2020, ndom91.
 
 Transitively from the John Hopkins Site, the data may not be used for commercial purposes.
