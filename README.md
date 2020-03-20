@@ -1,8 +1,10 @@
-# DE COVID-19 API
+# German COVID-19 JSON API
 
 Part of the #wirvsvirushackathon
 
-> Serving data from Robert Koch Institut as a [JSON API](https://covid19.ndo.dev)
+> Serving data from Robert Koch Institut as a [JSON API](https://covid19-de.ndo.dev)
+
+DevPost Project: https://devpost.com/software/covid19-de#updates
 
 ## Usage
 
@@ -18,4 +20,6 @@ Part of the #wirvsvirushackathon
 
 MIT License 2020, ndom91.
 
-Transitively from the John Hopkins Site, the data may not be used for commercial purposes.
+Transitively from the Robert Koch Institue, the data may not be used for commercial purposes.
+
+Forked from @mathdroid/covid19 🙏
