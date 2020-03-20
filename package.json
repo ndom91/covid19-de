@@ -6,6 +6,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^2.1.1",
     "isomorphic-unfetch": "^3.0.0",
+    "now-fetch": "^0.1.1",
     "pbf": "^3.2.1",
     "puppeteer-core": "^2.1.1"
   },

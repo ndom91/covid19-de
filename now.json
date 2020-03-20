@@ -1,5 +1,5 @@
 {
-  "alias": "covid19.ndo.dev",
+  "alias": "covid19-de.ndo.dev",
   "headers": [
     {
       "source": "/(.*)",
