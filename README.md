@@ -6,6 +6,8 @@ DevPost Project: https://devpost.com/software/covid19-de#updates
 
 > Serving data primarily from Robert Koch Institut as a [JSON API](https://covid19-de.ndo.dev)
 
+**Example Deployment**: https://covid19-de.now.sh/
+
 ## 🏗️ Usage
 
 1. Clone
