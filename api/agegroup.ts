@@ -25,7 +25,7 @@ export default async (_, response: NowResponse) => {
       }
     ).then(resp => resp.json()),
     fetch(
-      "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_Landkreisdaten/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=cases%20desc&resultOffset=0&resultRecordCount=1000&cacheHint=true",
+      "https://services7.arcgis.com/mOBPykOjAyBO2ZKk/arcgis/rest/services/RKI_COVID19/FeatureServer/0/query?f=json&where=Geschlecht%3C%3E%27unbekannt%27%20AND%20Altersgruppe%3C%3E%27unbekannt%27&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&groupByFieldsForStatistics=Altersgruppe%2CGeschlecht&orderByFields=Altersgruppe%20asc&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22AnzahlFall%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true",
       {
         credentials: "omit",
         headers: {
@@ -47,26 +47,20 @@ export default async (_, response: NowResponse) => {
     ).then(resp => resp.json())
   ])
     .then(([date, data]) => {
-      console.log(date, data);
       const lastEditDateRaw = new Date(date.editingInfo.lastEditDate);
       const lastEditDate = lastEditDateRaw.toUTCString();
 
-      const results = [];
-      data.features.forEach(county => {
-        results.push({
-          county: county.attributes.county,
-          bundesland: county.attributes.BL,
-          death_rate: county.attributes.death_rate,
-          cases: county.attributes.cases,
-          deaths: county.attributes.deaths,
-          cases_per_100k: county.attributes.cases_per_100k,
-          cases_per_population: county.attributes.cases_per_population
-        });
-      });
+      const resultsM = data.features.filter(
+        feat => feat.attributes.Geschlecht === "M"
+      );
+      const resultsW = data.features.filter(
+        feat => feat.attributes.Geschlecht === "W"
+      );
       response.json({
-        description: "Details per County",
+        description: "Cases per Age Group / Gender",
         lastUpdate: lastEditDate,
-        data: results,
+        M: resultsM,
+        W: resultsW,
         source: "https://github.com/ndom91/covid19-de"
       });
     })

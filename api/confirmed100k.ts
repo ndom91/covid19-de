@@ -47,7 +47,6 @@ export default async (_, response: NowResponse) => {
     ).then(resp => resp.json())
   ])
     .then(([date, rate]) => {
-      console.log(date, rate);
       const lastEditDateRaw = new Date(date.editingInfo.lastEditDate);
       const lastEditDate = lastEditDateRaw.toUTCString();
 
