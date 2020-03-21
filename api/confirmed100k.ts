@@ -59,8 +59,10 @@ export default async (_, response: NowResponse) => {
         });
       });
       response.json({
+        description: "Infection Rate per 100k Residents",
         lastUpdate: lastEditDate,
-        rate: results
+        rate: results,
+        source: "https://github.com/ndom91/covid19-de"
       });
     })
     .catch(err => {
