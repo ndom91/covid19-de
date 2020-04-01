@@ -1,12 +1,10 @@
 # 🦠 German COVID-19 JSON API
 
-Part of the #wirvsvirushackathon  
-
-DevPost Project: https://devpost.com/software/covid19-de#updates
+### Note: My team and I built a similar, but more full featured API project for the #WirVsVirus Hackathon. You can find the project repos at: https://github.com/CoronaAPI
 
 > Serving data primarily from Robert Koch Institut as a [JSON API](https://covid19-de.ndo.dev)
 
-**Example Deployment**: https://covid19-de.now.sh/
+**Example Deployment**: https://covid19-de.now.sh/api/confirmed100k
 
 ## 🏗️ Usage
 
